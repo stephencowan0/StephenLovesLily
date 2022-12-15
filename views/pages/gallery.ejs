@@ -3,7 +3,33 @@
 
         <main>
             <%- include ('../partials/message') %>
-
+                <center>
+                    <h1>Photo Gallery</h1>
+                </center>
+                <div class="container">
+                    <center>
+                        <table>
+                            <tr>
+                                <% images.forEach(function(image) { %>
+                                    <td>
+                                        <% url=image.imageurl; date=image.imagedate; description=image.imagedescription;
+                                            %>
+                                            <div class="card" style="width: 18rem;">
+                                                <img class="card-img-top" src="<%- url %>" alt="<%- description %>">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">
+                                                        <%- description %>
+                                                    </h5>
+                                                    <p class="card-text"><%- date %></p>
+                                                    <a href="<%- url %>" class="btn btn-primary">Full-size Image</a>
+                                                </div>
+                                            </div>
+                                    </td>
+                                    <% }); %>
+                            </tr>
+                        </table>
+                    </center>
+                </div>
         </main>
 
         <%- include ('../partials/footer') %>
