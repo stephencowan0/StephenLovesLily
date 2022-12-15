@@ -3,7 +3,25 @@
 
         <main>
             <%- include ('../partials/message') %>
-
+                <center>
+                    <h1>Phone List:</h1>
+                    <table style="width: 100%;" id="events_table">
+                        <tr>
+                            <th>Date</th>
+                            <th>Description</th>
+                        </tr>
+                        <% events.forEach(function(event) { %>
+                            <tr>
+                                <td>
+                                    <%= event.eventdate %>
+                                </td>
+                                <td>
+                                    <%= event.eventdescription %>
+                                </td>
+                            </tr>
+                            <% }); %>
+                    </table>
+                </center>
         </main>
 
         <%- include ('../partials/footer') %>

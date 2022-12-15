@@ -63,7 +63,18 @@ app.get("/countdown", (req, res) => {
 });
 
 app.get("/phone_list", (req, res) => {
-    res.render("pages/phone_list");
+    let query = `SELECT * FROM events;`;
+    db.any(query)
+        .then((events) => {
+            res.render("pages/phone_list", {
+                events,
+            });
+        })
+        .catch((error) => {
+            res.render("pages/phone_list", {
+                message: `Events Failed to Load`,
+            });
+        });
 });
 
 app.get("/gallery", (req, res) => {
