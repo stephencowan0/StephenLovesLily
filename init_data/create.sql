@@ -1,5 +1,5 @@
 CREATE TABLE events(
 eventID SERIAL PRIMARY KEY,
 eventDate VARCHAR(64) NOT NULL,
-eventDescription VARCHAR(1024) NOT NULL
+eventDescription VARCHAR(256) NOT NULL
 );
