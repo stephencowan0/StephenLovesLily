@@ -78,5 +78,16 @@ app.get("/phone_list", (req, res) => {
 });
 
 app.get("/gallery", (req, res) => {
-    res.render("pages/gallery");
+    let query = `SELECT * FROM images;`;
+    db.any(query)
+        .then((images) => {
+            res.render("pages/gallery", {
+                images,
+            });
+        })
+        .catch((error) => {
+            res.render("pages/gallery", {
+                message: `Gallery Failed to Load`,
+            });
+        });
 });

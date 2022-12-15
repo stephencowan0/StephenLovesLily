@@ -33,3 +33,9 @@ INSERT INTO events (eventDate, eventDescription) VALUES
 ('August 6, 2022', 'Left Colorado to drive with her to move to Tucson. Made it to Albuquerque to sleep together at the hotel'),
 ('August 13, 2022', 'The day that I really, really hoped would never come. I left Arizona to come back to Colorado, we now live in different states, 1000 miles apart'),
 ('September 2, 2022 - September 5, 2022', 'She visited us in Colorado for Labor Day weekend, crazy airport stuff including both flights delayed 2+ hours');
+
+INSERT INTO images (imageDate, imageDescription, imageURL) VALUES
+('May 25, 2022','Six Month Anniversary','https://i.imgur.com/dpPRaTi.jpg'),
+('July 3, 2022','Walking the dogs','https://i.imgur.com/L7Pg107.jpg'),
+('July 21, 2022','Stadium Tour Concert','https://i.imgur.com/V5jwbid.jpg'),
+('May 21, 2022','Lils Graduation Party','https://i.imgur.com/9ahMHbJ.jpg');

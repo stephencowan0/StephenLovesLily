@@ -3,3 +3,10 @@ eventID SERIAL PRIMARY KEY,
 eventDate VARCHAR(64) NOT NULL,
 eventDescription VARCHAR(256) NOT NULL
 );
+
+CREATE TABLE images(
+imageID SERIAL PRIMARY KEY,
+imageDate VARCHAR(32) NOT NULL,
+imageDescription VARCHAR(256) NOT NULL,
+imageURL VARCHAR(256) NOT NULL
+);
